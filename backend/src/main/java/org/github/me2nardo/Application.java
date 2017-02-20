@@ -1,12 +1,12 @@
-package com.jdriven.ng2boot;
+package org.github.me2nardo;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class Ng2bootApplication {
+public class Application {
 
 	public static void main(String[] args) {
-		SpringApplication.run(Ng2bootApplication.class, args);
+		SpringApplication.run(Application.class, args);
 	}
 }

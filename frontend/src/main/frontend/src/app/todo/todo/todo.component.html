@@ -1,0 +1,24 @@
+<h2>My Todo List</h2>
+<div>
+  <div>
+    <label>Add new Task:</label> <input #taskName />
+    <button (click)="addTodo(taskName.value); taskName.value=''">
+      Add
+    </button>
+  </div>
+  <ul class="a">
+    <li *ngFor="let todo of todoList" (click)="onSelect(todo)" [class.selected]="todo===selectedTodo">
+        {{todo.title}}
+      {{todo.complete}}
+      <button class="delete"
+              (click)="deleteTodo(todo); $event.stopPropagation()">x</button>
+    </li>
+  </ul>
+</div>
+<div *ngIf="errorMessage">
+  {{errorMessage}}
+</div>
+<div *ngIf="selectedTodo">
+  <h2>You select {{selectedTodo.title}}</h2>
+  <button (click)="gotoDetail()">Go to details</button>
+</div>

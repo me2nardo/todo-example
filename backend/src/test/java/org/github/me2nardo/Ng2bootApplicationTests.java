@@ -1,4 +1,4 @@
-package com.jdriven.ng2boot;
+package org.github.me2nardo;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

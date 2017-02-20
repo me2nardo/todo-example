@@ -1,0 +1,28 @@
+spring:
+    devtools:
+        restart:
+            enabled: true
+        livereload:
+            enabled: true
+    datasource:
+        driverClassName: org.h2.Driver
+        url: jdbc:h2:mem:testdb
+        name: dev
+        username: sa
+        password: sa
+    jpa:
+        database-platform: org.hibernate.dialect.H2Dialect
+        database: H2
+        persistenceUnitName: DEV
+        properties:
+            hibernate.generate_statistics: "true"
+            hibernate.use_sql_comments: "true"
+            hibernate.format_sql: "true"
+            hibernate.show_sql: "true"
+            hibernate.hbm2ddl.auto: "create"
+
+loggining:
+    level.: "DEBUG"
+
+server:
+    port: 8081
