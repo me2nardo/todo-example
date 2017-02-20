@@ -35,10 +35,12 @@ export class TodoComponent implements OnInit {
    }
 
    deleteTodo(todo:Todo):void{
-    this.todoService.deleteTodo(todo.id);
-     console.log(todo.id);
-    this.todoList.filter(list=>list!=todo);
-    this.selectedTodo = null;
+    this.todoService.deleteTodo(todo.id).subscribe(()=>{
+      console.log("Inside");
+      this.getTodo();
+      this.selectedTodo = null;
+    });
+
    }
 
   ngOnInit():void {

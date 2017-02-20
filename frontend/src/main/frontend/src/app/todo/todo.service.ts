@@ -44,7 +44,7 @@ export class TodoService {
 
   }
 
-  deleteTodo(id:number){
+  deleteTodo(id:number):Observable<void>{
     const url = `${this.baseUrl}/${id}`;
     return this.http.delete(url,{headers: this.headers}).catch(this.handleError);
   }
